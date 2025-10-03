@@ -25,6 +25,18 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
+      # NEW: patch Gemfile.lock to support Linux on the runner
+      - name: Ensure Linux platform in lockfile
+        run: |
+          bundle lock --add-platform x86_64-linux || true
+          bundle lock --add-platform ruby || true
+
+      # Optional but helpful: prints versions in the log
+      - name: Ruby & Bundler versions
+        run: |
+          ruby -v
+          bundler -v
+
       - name: Install deps
         run: bundle install --without development
 
