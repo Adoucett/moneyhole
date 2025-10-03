@@ -1,0 +1,24 @@
+---
+# Only front matter so Jekyll processes this file
+---
+
+/* Order matters: set variables, then import skin + theme */
+$serif: "Merriweather", Georgia, serif;
+$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+$body-font-family: $sans-serif;
+$header-font-family: $serif;
+$brand-color: #0f766e;      /* pick your own accent, not ClickHole’s */
+$link-color: $brand-color;
+
+/* Import Minimal Mistakes */
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
+
+/* Cardy grid tweaks */
+.archive .grid__item { border: 0; box-shadow: 0 1px 8px rgba(0,0,0,.06); border-radius: 10px; }
+.archive__item-title { font-weight: 700; }
+.feature-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.feature__item { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+.feature__image img { width: 100%; display: block; }
+.feature__content { padding: 0.75rem 1rem; }

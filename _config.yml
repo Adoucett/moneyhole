@@ -1,0 +1,134 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Money Hole
+description: "America’s most trusted source for financial enlightenment and deranged scams."
+timezone: America/Chicago
+
+# Once the domain is live, change this:
+url: "https://money-hole.com"
+baseurl: ""   # root
+
+# Use Minimal Mistakes either way:
+# Option A: theme from Gem
+theme: "minimal-mistakes-jekyll"
+# Option B: remote theme (comment the `theme:` line above)
+# remote_theme: "mmistakes/minimal-mistakes"
+
+permalink: /:categories/:title/
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-include-cache
+  - jekyll-remote-theme
+  - jemoji
+
+paginate: 12
+paginate_path: "/page:num/"
+
+# Minimal Mistakes options
+locale: en
+title_separator: "·"
+search: false   # we'll add Pagefind later; set this true if you wire Lunr
+breadcrumbs: false
+
+# Navigation (Minimal Mistakes reads _data/navigation.yml)
+collections: {}
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Author defaults and post layout
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      classes: wide
+      author_profile: false
+      read_time: true
+      share: true
+      related: true
+      show_date: true
+      toc: false
+
+# jekyll-seo-tag config
+logo: /assets/images/logo-1200x630.png
+twitter:
+  username: moneyhole
+  card: summary_large_image
+social:
+  name: Money Hole
+  links:
+    - https://adoucett.github.io/moneyhole
+
+# jekyll-feed
+feed:
+  path: feed.xml
+
+# jekyll-archives builds auto archive pages
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive
+    tag: archive
+  permalinks:
+    category: /category/:name/
+    tag: /tag/:name/
+
+# Fonts via Google Fonts (MM will include these)
+google_fonts:
+  - family: "Inter"
+    weights: "400;600;700"
+  - family: "Merriweather"
+    weights: "400;700"
+
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

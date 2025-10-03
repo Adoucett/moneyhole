@@ -1,0 +1,15 @@
+main:
+  - title: "Exclusives"
+    url: /category/exclusives/
+  - title: "Markets"
+    url: /category/markets/
+  - title: "Influencers"
+    url: /category/influencers/
+  - title: "Guides"
+    url: /category/guides/
+  - title: "Opinion"
+    url: /category/opinion/
+  - title: "About"
+    url: /about/
+  - title: "RSS"
+    url: /feed.xml
