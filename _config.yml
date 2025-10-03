@@ -23,8 +23,13 @@ description: "America’s most trusted source for financial enlightenment and de
 timezone: America/Chicago
 
 # Once the domain is live, change this:
-url: "https://money-hole.com"
-baseurl: ""   # root
+# url: "https://money-hole.com"
+# baseurl: ""   # root
+
+# _config.yml
+url: "https://adoucett.github.io"
+baseurl: "/moneyhole"
+
 
 # Use Minimal Mistakes either way:
 # Option A: theme from Gem
