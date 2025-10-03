@@ -1,17 +1,18 @@
 source "https://rubygems.org"
-gem "jekyll", "~> 4.3"
 
-# Theme
+gem "jekyll", "~> 4.3"
 gem "minimal-mistakes-jekyll"
 
-# GitHub Pages’ safe-list + useful extras
 gem "jekyll-feed"
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
 gem "jekyll-archives"
-gem "jekyll-paginate"       # simple paginator
-gem "jekyll-include-cache"  # perf for MM includes
-gem "jekyll-remote-theme"   # if you prefer remote_theme
-
-# Optional niceties
+gem "jekyll-paginate"
+gem "jekyll-include-cache"
+gem "jekyll-remote-theme"
 gem "jemoji"
+
+# for local `bundle exec jekyll serve` on Ruby 3
+group :development do
+  gem "webrick", "~> 1.8"
+end
